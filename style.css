@@ -1,0 +1,253 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Genos;
+}
+
+/*Thanh navbar*/
+.navbar{
+    font-family:Goldman;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:#6200ff;
+    padding: 25px 0px;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+}
+
+.navbar ul{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    list-style:none;
+    margin:0;
+    padding:0;
+    width: 100%;
+}
+
+.navbar li{
+    margin:0;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    font-size: 25px;
+    padding: 25px 30px;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    background-color:rgba(46, 0, 173, 0.281);
+}
+
+/*Home*/
+#home{
+    align-items: center;
+}
+
+.container-home{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:200px 50px;
+    background-color: #3d3d3d;
+}
+
+.container-home h1{
+    font-family: Goldman;
+    font-size: 40px;
+    color: white;
+    padding: 10px 0;
+} 
+
+.container-home h3{
+    font-family: Goldman;
+    font-size: 25px;
+    font-weight: lighter;
+    color: white;
+    padding: 5px 0;
+}
+
+.container-home img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-bottom: 20px;
+}
+
+/*About*/
+#about{
+    min-height:100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+    column-gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 10px;
+}
+
+.container1-about,
+.container2-about{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.container1-about h1,
+.container2-about h1{
+    font-family: 'Goldman';
+    font-size: 40px;
+    color: #6200ff;
+    padding-bottom: 10px;
+}
+
+.container1-about h3,
+.container2-about h3{
+    font-size: 30px;
+}
+
+.container1-about p,
+.container2-about p{
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+.skills-bar{
+    width: 100%;
+    height: 10px;
+    background-color: #002fff44;
+    border-radius: 10px;
+}
+
+.skill-fill{
+    height: 100%;
+    background-color: #002fff;
+    border-radius: 10px;
+}
+
+/*Resume*/
+#resume{
+    min-height:100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 0px;
+    column-gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 10px;
+}
+
+.timeline{
+    position: relative;
+    padding-left: 40px;
+}
+
+.timeline::before{
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    width: 3px;
+    height: 100%;
+    background: #ccc;
+}
+
+.timeline-item{
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.dot{
+    position: absolute;
+    left: -40px;
+    top: 15px;
+    width: 12px;
+    height: 12px;
+    background: #6200ff;
+    border-radius: 50%;
+}
+
+.container-education h1{
+    font-family: 'Goldman';
+    font-size: 40px;
+    color: #6200ff;
+    padding-bottom: 10px;
+}
+
+.content h3{
+    font-size: 30px;
+}
+
+.content p{
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+.content li{
+    font-size: 25px;
+    line-height: 1.2;
+    margin-left: 30px;
+}
+
+.container-work h1{
+    font-family: 'Goldman';
+    font-size: 40px;
+    color: #6200ff;
+    padding-bottom: 10px;
+}
+
+#projects{
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 10px;
+}
+
+.container-certificates h1{
+    font-family: 'Goldman';
+    font-size: 40px;
+    color: #6200ff;
+    padding-bottom: 10px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.container-certificates h3{
+    font-size: 30px;
+    line-height: 2.0;
+}
+
+.container-certificates li{
+    font-size: 25px;
+    line-height: 1.5;
+    margin-left: 30px;
+}
+
+#contact{
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 10px;
+    background-color: #3d3d3d;
+}
+
+.container-contact h1{
+    font-family: 'Goldman';
+    font-size: 40px;
+    color: white;
+    padding-bottom: 10px;
+}
