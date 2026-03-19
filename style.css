@@ -251,3 +251,91 @@ body{
     color: white;
     padding-bottom: 10px;
 }
+
+/*Responsive mobile*/
+@media (max-width: 500px){
+
+    .navbar{
+        padding: 10px 5px;
+    }
+
+    .navbar ul{
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .navbar a{
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+
+    .container-home{
+        padding: 100px 15px;
+        text-align: center;
+    }
+
+    .container-home img{
+        width: 140px;
+        height: 140px;
+        border: 3px solid white;
+    }
+
+    .container-home h1{
+        font-size: 24px;
+    }
+
+    .container-home h3{
+        font-size: 15px;
+    }
+
+    #about,
+    #resume{
+        grid-template-columns: 1fr;
+        padding: 60px 15px;
+        gap: 30px;
+    }
+
+    #projects{
+        grid-template-columns: 1fr;
+        padding: 60px 10px;
+    }
+
+    .projects-wrapper{
+        grid-column: 1;
+        grid-template-columns: 1fr;
+    }
+
+    h1{
+        font-size: 24px;
+    }
+
+    h3{
+        font-size: 18px;
+    }
+
+    p, li{
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .timeline{
+        padding-left: 20px;
+    }
+
+    .timeline::before{
+        left: 0;
+    }
+
+    .dot{
+        width: 10px;
+        height: 10px;
+        left: -23px;
+    }
+
+    .container-contact{
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+        padding: 80px 10px;
+    }
+}
