@@ -236,22 +236,36 @@ body{
     margin-left: 30px;
 }
 
+/*Contact*/
 #contact{
-    min-height:100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 120px 10px;
     background-color: #3d3d3d;
+    padding: 0 40px;
 }
 
-.container-contact h1{
-    font-family: 'Goldman';
-    font-size: 40px;
+.container-contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 0px;
+    column-gap: 80px;
+    
+    margin: 0 auto;
+    padding: 120px 0px;
+    
+}
+
+.container-contact h3{
+    font-size: 30px;
+    color:white;  
+}
+
+.container-contact p{
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.container-contact a{
     color: white;
-    padding-bottom: 10px;
 }
-
 /*Responsive mobile*/
 @media (max-width: 500px){
 
