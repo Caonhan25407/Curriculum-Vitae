@@ -207,32 +207,35 @@ body{
 }
 
 #projects{
-    min-height:100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 600px 1fr;
     padding: 120px 10px;
 }
 
-.container-certificates h1{
+.container-certificates,
+.container-projects{
+    grid-column: 2;
+    width: 100%;
+}
+
+.container-certificates h1,
+.container-projects h1{
+    text-align: center;
     font-family: 'Goldman';
     font-size: 40px;
     color: #6200ff;
     padding-bottom: 10px;
-    position: relative;
-    text-align: center;
-    width: 100%;
-    max-width: 800px;
 }
 
-.container-certificates h3{
+.container-certificates h3,
+.container-projects h3{
     font-size: 30px;
-    line-height: 2.0;
 }
 
-.container-certificates li{
+.container-certificates li,
+.container-projects li{
     font-size: 25px;
-    line-height: 1.5;
+    line-height: 1.2;
     margin-left: 30px;
 }
 
