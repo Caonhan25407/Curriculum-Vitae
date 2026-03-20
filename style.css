@@ -206,39 +206,6 @@ body{
     padding-bottom: 10px;
 }
 
-#projects{
-    display: grid;
-    grid-template-columns: 1fr 600px 1fr;
-    padding: 120px 10px;
-}
-
-.container-certificates,
-.container-projects{
-    grid-column: 2;
-    width: 100%;
-}
-
-.container-certificates h1,
-.container-projects h1{
-    text-align: center;
-    font-family: 'Goldman';
-    font-size: 40px;
-    color: #6200ff;
-    padding-bottom: 10px;
-}
-
-.container-certificates h3,
-.container-projects h3{
-    font-size: 30px;
-}
-
-.container-certificates li,
-.container-projects li{
-    font-size: 25px;
-    line-height: 1.2;
-    margin-left: 30px;
-}
-
 /*Contact*/
 #contact{
     background-color: #3d3d3d;
