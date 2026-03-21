@@ -322,4 +322,8 @@ body{
         gap: 20px;
         padding: 80px 10px;
     }
+
+    #contact{
+    padding: 0;
+    }
 }
