@@ -4,18 +4,38 @@
     box-sizing:border-box;
 }
 
-body{
-    font-family:Genos;
+html, body{
+    font-family:'Genos';
+}
+
+section{
+    width: 100%;
+}
+
+h1{
+    font-size: clamp(28px, 4vw, 40px);
+}
+
+h3{
+    font-size: clamp(22px, 2.5vw, 30px);
+}
+
+p, li, a{
+    font-size: clamp(16px, 2vw, 25px);
+}
+
+p, a{
+    overflow-wrap: break-word;
 }
 
 /*Thanh navbar*/
 .navbar{
-    font-family:Goldman;
+    font-family:'Goldman';
     display:flex;
     justify-content:center;
     align-items:center;
     background-color:#6200ff;
-    padding: 25px 0px;
+    padding: 25px 30px;
     width: 100%;
     z-index: 1000;
     position: fixed;
@@ -38,8 +58,8 @@ body{
 .navbar a{
     color:white;
     text-decoration:none;
-    font-size: 25px;
-    padding: 25px 30px;
+    font-size: clamp(20px, 2vw, 22px);
+    padding: clamp(10px, 2vw, 20px);
 }
 
 .navbar a:hover,
@@ -57,20 +77,18 @@ body{
     display:flex;
     flex-direction:column;
     align-items:center;
-    padding:200px 50px;
+    padding: 120px 20px;
     background-color: #3d3d3d;
 }
 
 .container-home h1{
     font-family: Goldman;
-    font-size: 40px;
     color: white;
     padding: 10px 0;
 } 
 
 .container-home h3{
     font-family: Goldman;
-    font-size: 25px;
     font-weight: lighter;
     color: white;
     padding: 5px 0;
@@ -81,8 +99,31 @@ body{
     height: 300px;
     border-radius: 50%;
     border: 5px solid white;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
+
+.container-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.container-logo a{
+    text-decoration: none;
+}
+
+.container-logo i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;
+    color: white;
+}
+
 
 /*About*/
 #about{
@@ -106,19 +147,12 @@ body{
 .container1-about h1,
 .container2-about h1{
     font-family: 'Goldman';
-    font-size: 40px;
     color: #6200ff;
     padding-bottom: 10px;
 }
 
-.container1-about h3,
-.container2-about h3{
-    font-size: 30px;
-}
-
 .container1-about p,
 .container2-about p{
-    font-size: 25px;
     line-height: 1.2;
 }
 
@@ -139,7 +173,7 @@ body{
 #resume{
     min-height:100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     row-gap: 0px;
     column-gap: 80px;
     max-width: 1200px;
@@ -179,65 +213,81 @@ body{
 
 .container-education h1{
     font-family: 'Goldman';
-    font-size: 40px;
     color: #6200ff;
     padding-bottom: 10px;
 }
 
-.content h3{
-    font-size: 30px;
-}
-
 .content p{
-    font-size: 25px;
     line-height: 1.2;
 }
 
 .content li{
-    font-size: 25px;
     line-height: 1.2;
     margin-left: 30px;
 }
 
 .container-work h1{
     font-family: 'Goldman';
-    font-size: 40px;
     color: #6200ff;
     padding-bottom: 10px;
+}
+
+#projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 1000px;
+    margin: auto;
+    padding: 120px 20px;
+}
+
+.container-certificates h1,
+.container-projects h1{
+    text-align: center;
+    font-family: 'Goldman';
+    color: #6200ff;
+    padding-bottom: 10px;
+}
+
+.container-certificates li,
+.container-projects li{
+    line-height: 1.2;
+    margin-left: 30px;
 }
 
 /*Contact*/
 #contact{
     background-color: #3d3d3d;
-    padding: 0 40px;
+    padding: 0 20px;
 }
 
 .container-contact{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     row-gap: 0px;
-    column-gap: 80px;
-    
+    column-gap: 50px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 120px 0px;
     
 }
 
 .container-contact h3{
-    font-size: 30px;
     color:white;  
 }
 
 .container-contact p{
-    font-size: 25px;
     color: #ffffff;
 }
 
 .container-contact a{
+    display: inline-block;
+    max-width: 100%;
     color: white;
+    word-break: break-word;
 }
+
 /*Responsive mobile*/
-@media (max-width: 500px){
+@media (max-width: 600px){
 
     .navbar{
         padding: 10px 5px;
@@ -245,12 +295,12 @@ body{
 
     .navbar ul{
         flex-wrap: wrap;
-        gap: 5px;
+        gap: 0px;
     }
 
     .navbar a{
-        font-size: 14px;
-        padding: 6px 8px;
+        font-size: 16px;
+        padding: 10px;
     }
 
     .container-home{
@@ -264,12 +314,8 @@ body{
         border: 3px solid white;
     }
 
-    .container-home h1{
-        font-size: 24px;
-    }
-
-    .container-home h3{
-        font-size: 15px;
+    .container-logo i{
+        gap: 15px;
     }
 
     #about,
@@ -282,24 +328,6 @@ body{
     #projects{
         grid-template-columns: 1fr;
         padding: 60px 10px;
-    }
-
-    .projects-wrapper{
-        grid-column: 1;
-        grid-template-columns: 1fr;
-    }
-
-    h1{
-        font-size: 24px;
-    }
-
-    h3{
-        font-size: 18px;
-    }
-
-    p, li{
-        font-size: 14px;
-        line-height: 1.4;
     }
 
     .timeline{
@@ -324,6 +352,6 @@ body{
     }
 
     #contact{
-    padding: 0;
+        padding: 0;
     }
 }
